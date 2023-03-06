@@ -1,10 +1,10 @@
+import Todo from "./Todo";
 
-const TodoList = ({ todos }) => {
+
+const TodoList = ({ todos, toggleTodo}) => {
     return (
-        <div>
-            {todos}
-        </div>
-    )
+        todos.map((todo) => <Todo todo={todo} key={todo.id} toggleTodo={toggleTodo} />)
+    );
 }
 
 export default TodoList;
